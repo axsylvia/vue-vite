@@ -11,6 +11,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: () => import('@/views/About.vue')
+    },
+    {
+        path: '/reactive',
+        name: 'Reactive',
+        component: () => import('@/views/Reactive.vue')
     }
 ]
 

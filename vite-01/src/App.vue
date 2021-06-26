@@ -2,6 +2,7 @@
   <div id="nav">
     <router-link to="/">Home</router-link>
     <router-link to="/about">about</router-link>
+    <router-link to="/reactive">Reactive</router-link>
   </div>
   <router-view></router-view>
 </template>
