@@ -16,6 +16,26 @@ const routes = [
         path: '/reactive',
         name: 'Reactive',
         component: () => import('@/views/Reactive.vue')
+    },
+    {
+        path: '/toRef',
+        name: 'toRef',
+        component: () => import('@/views/toRef.vue')
+    },
+    {
+        path: '/computed',
+        name: 'computed',
+        component: () => import('@/views/computed.vue')
+    },
+    {
+        path: '/watchEffect',
+        name: 'watchEffect',
+        component: () => import('@/views/watchEffect.vue')
+    },
+    {
+        path: '/watch',
+        name: 'watch',
+        component: () => import('@/views/watch.vue')
     }
 ]
 
