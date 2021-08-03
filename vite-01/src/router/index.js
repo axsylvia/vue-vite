@@ -36,6 +36,16 @@ const routes = [
         path: '/watch',
         name: 'watch',
         component: () => import('@/views/watch.vue')
+    },
+    {
+        path: '/asyncshow',
+        name: 'asyncshow',
+        component: () => import('@/views/AsyncShow.vue')
+    },
+    {
+        path: '/dialog',
+        name: 'dialog',
+        component: () => import('@/views/dialog.vue')
     }
 ]
 

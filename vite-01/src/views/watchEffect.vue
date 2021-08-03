@@ -1,43 +1,48 @@
 <template>
-<!--  <input type="text" v-model="keyword" />-->
-  {{count}}
+  <!--  <input type="text" v-model="keyword" />-->
+  <!-- {{count}} -->
+  <div class="selectedBorder" ref="main">
+    <div class="bankItem" v-if="bankSwitch == true">
+      你好我是弹窗里面的内容部分
+    </div>
+  </div>
 </template>
 
 <script>
-import  { ref, watchEffect,onBeforeUpdate} from "vue";
+import { ref, watchEffect, onBeforeUpdate } from "vue";
 
 export default {
   name: "watchEffect",
 
-  setup() {
+  setup () {
 
-    const count = ref(0)
+    // const count = ref(0)
 
-    watchEffect((onInvalidate)=> {
-      console.log(count.value)
+    // watchEffect((onInvalidate)=> {
+    //   console.log(count.value)
 
-      onInvalidate(()=> {
-        console.log('清理副作用')
-      })
+    //   onInvalidate(()=> {
+    //     console.log('清理副作用')
+    //   })
 
-    },{
-      flush: 'post'
-    })
+    // },{
+    //   flush: 'post'
+    // })
 
-    onBeforeUpdate(()=> {
-      console.log('update')
-    })
+    // onBeforeUpdate(()=> {
+    //   console.log('update')
+    // })
 
-    setTimeout(()=> {
-      count.value ++
-    },1000)
-    setTimeout(()=> {
-      count.value ++
-    },2000)
+    // setTimeout(()=> {
+    //   count.value ++
+    // },1000)
+    // setTimeout(()=> {
+    //   count.value ++
+    // },2000)
 
-    return {
-      count
-    }
+    // return {
+    //   count
+    // }
 
     // 不用使用data
     // const keyword = ref('')
@@ -92,5 +97,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
